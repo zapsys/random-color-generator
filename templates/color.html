@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        body {
+            background-color: {{ color }};
+        }
+    </style>
+    <div id="update-page">
+       <button id="reload-page" onclick="location.reload()">New Color (F5)</button>
+    </div>
+    <div id="color-code" title="Click to copy!">{{ color }}</div>
+    <div id="notification">Hex code copied to clipboard!</div>
+{% endblock %}
