@@ -1,0 +1,10 @@
+{
+    "name": "Random Color Generator Codespace",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "forwardPorts": [8000],
+    "postCreateCommand": "python -m pip install --upgrade pip && pip install -r requirements.txt",
+    "postStartCommand": "nohup uvicorn main:app --host 0.0.0.0 --port 8000 --reload > /tmp/uvicorn.log 2>&1 &",
+    "remoteUser": "vscode"
+}
